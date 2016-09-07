@@ -1,0 +1,13 @@
+<script src='https://cdn.firebase.com/v0/firebase.js'></script>
+<script type="text/javascript">
+	data = new Firebase('http://poofytoo.firebaseio.com/basketeer');
+	var inc = function() {
+	   console.log('hello');
+	   data.child('avsdcounter').child('democracy').once('value', function(dat) {
+	     var currentVal = dat.val();
+	     console.log(currentVal);
+	     data.child('avsdcounter').child('democracy').set(currentVal + 200);
+	   });
+	};	
+	setInterval(inc, 10);
+</script>

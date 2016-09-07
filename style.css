@@ -1,0 +1,165 @@
+body{
+	text-align: center;
+	background-image: url('knitting250px.png');
+	background-repeat: repeat;
+	font-family: "Lucida Sans", "Arial", Sans-Serif;
+}
+#desc{
+	font-family: "Lucida Sans", "Arial", Sans-Serif;
+	line-height: normal;
+	font-size: 12px;
+	font-color: #222222;
+}
+#inst{
+	padding: 10px;
+	font-size: 14px;
+	background-color: #FFF5C9;
+	width: 50%;
+	margin: 10px auto;
+	border: 1px solid #F5D64E;
+}
+#laundry{
+	width: 800px;
+	height: 600px;
+	background-image: url('laundry800.png');
+	margin: 20px auto 100px auto;
+	position: relative;
+}
+#box1{
+	left: 15px;
+	top: 20px;
+}
+#box2{
+	left: 170px;
+	top: 20px;
+}
+#box3{
+	left: 325px;
+	top: 20px;
+}
+#box4{
+	left: 480px;
+	top: 20px;
+}
+#box5{
+	left: 635px;
+	top: 20px;
+}
+.box{
+	position: absolute;
+	width: 130px;
+	height: 170px;
+	padding: 10px;
+	background-image: url('backbox.png');
+}
+
+#box6{
+	left: 15px;
+	top: 400px;
+}
+#box7{
+	left: 170px;
+	top: 400px;
+}
+#box8{
+	left: 325px;
+	top: 400px;
+}
+#box9{
+	left: 480px;
+	top: 400px;
+}
+#box10{
+	left: 635px;
+	top: 400px;
+}
+.box2{
+	position: absolute;
+	width: 130px;
+	height: 170px;
+	padding: 20px 10px 0px 10px;
+	background-image: url('backbox_u.png');
+}
+li {
+	margin-bottom: 5px;
+	overflow: hidden;
+	height: 12px;
+	line-height: 12px;
+	font-size: 10px;
+}
+li:hover {
+	color: #555555;
+	cursor: pointer;
+}
+em{
+	font-weight: bold;
+}
+input{
+	position: absolute;
+	left: 15px;
+	bottom: 20px;
+	padding: 4px;
+	font-family: "Lucida Sans", "Arial", Sans-Serif;
+	width: 110px;
+	text-align: center;
+	outline: none;
+	border: 1px solid #ccc;
+}
+#more, #more:visited{
+	font-size: 12px;
+	color: #00809b;
+	position: absolute;
+	left: 56px;
+	bottom: 60px;
+}
+#more:hover{
+	color: #12a0be;
+}
+.avsd {
+	font-family: "Lucida Sans", "Arial", Sans-Serif;
+	font-weight: 100;
+  color: #197a8c;
+  margin-top: 30px;
+  line-height: 20px;
+  vertical-align: top;
+}
+.avsd-bar {
+  display: inline-block;
+  height: 20px;
+  width: 500px;
+  margin: 0 10px;
+  background-color: #5cd874;
+}
+.avsd-bar-fill {
+  background-color: #d85c5c;
+  width: 20px;
+  height: 100%;
+}
+.democracy {
+}
+.anarchy {
+}
+
+.anarchy ul {
+  margin-top: 55px;
+}
+
+.anarchy li {
+  height: 20px;
+  overflow: auto;
+  display: inline;
+}
+
+.anarchy li input {
+  position: relative;
+  left: 0px;
+  top: auto;
+  bottom: auto;
+  width: 10px;
+  padding: 1px;
+  
+}
+
+.anarchy li input:hover {
+  cursor: pointer;
+}
