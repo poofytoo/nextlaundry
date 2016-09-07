@@ -1,0 +1,13 @@
+<script src='https://cdn.firebase.com/v0/firebase.js'></script>
+<html>
+	<button onclick="clearAllBaskets()">Don't click me unless you really mean it</button>
+</html>
+<script type="text/javascript">
+	function clearAllBaskets() {
+		data = new Firebase('https://poofytoo.firebaseio.com/basketeer/');
+		for (var i = 1; i <= 10; i++) {
+			data.child('box'+i).set({});
+		}
+		console.log('Cleared all basket votes.');
+	}
+</script>
