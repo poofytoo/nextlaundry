@@ -21,7 +21,7 @@ $(document).ready(function(){
   			html = '';
         if (db["box" + i]) {
     			topVoted = getTopVoted(db["box" + i]);
-    			html += "<li title='" + topVoted + "' id='" + i + "_" + topVoted + "'><em>(+" + db["box"+i][topVoted] + ") " + overflowCheck(topVoted) + "</em></li>";
+    			html += "<li title='" + topVoted + "' id='" + i + "_" + topVoted + "'><em>" + overflowCheck("(+" + db["box"+i][topVoted] + ") " + topVoted) + "</em></li>";
     
     			contenders = Object.keys(db["box" + i]);
     			contenders.sort(function() {return 0.5 - Math.random()});
@@ -30,7 +30,7 @@ $(document).ready(function(){
     				
     				k = contenders[j];
     				if (k != topVoted)
-    				html += "<li title='" + k + "' id='" + i + "_" + k + "'>(+" + db["box"+i][k] + ") " + overflowCheck(k) + "</li>";
+    				html += "<li title='" + k + "' id='" + i + "_" + k + "'>" + overflowCheck("(+" + db["box"+i][k] + ") " + k) + "</li>";
     			}
     			$("#box" + i + " ul").html(html);
         }
@@ -107,12 +107,23 @@ $(document).ready(function(){
 		return key;
 	}
 
+  function getTextWidth(text) {
+    var canvas = getTextWidth.canvas || (getTextWidth.canvas = document.createElement("canvas"));
+    var context = canvas.getContext("2d");
+    context.font = "bold 12px lucida sans";
+    return context.measureText(text).width;
+  }
+
 	// truncate text
-	function overflowCheck(text){
-		if (text.length > 20){
-			return text.substring(0,18) + "...";
-		}
-		return text
+	function overflowCheck(text) {
+    if (getTextWidth(text) > 150) {
+      text = text.substring(0, text.length - 2) + "...";
+    }
+    // remove one char at a time until it fits
+    while (getTextWidth(text) > 150) {
+      text = text.substring(0, text.length - 4) + "...";
+    }
+		return text;
 	}
 	
 	updateGrid();
